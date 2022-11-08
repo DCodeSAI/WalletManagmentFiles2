@@ -1,4 +1,5 @@
-import ViewModel.LoginUITemplate;
+import ViewModel.Login.LoginComponent;
+import ViewModel.Login.LoginUITemplate;
 
 import javax.swing.*;
 
@@ -9,7 +10,8 @@ public class Main {
             @Override
             public void run() {
 
-                LoginUITemplate loginUITemplate = new LoginUITemplate();
+                LoginComponent loginComponent =new LoginComponent();
+                loginComponent.getClass();
 
             }
         };

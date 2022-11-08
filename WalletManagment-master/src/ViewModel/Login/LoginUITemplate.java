@@ -1,4 +1,4 @@
-package ViewModel;
+package ViewModel.Login;
 
 import javax.swing.*;
 import javax.swing.border.Border;
@@ -28,6 +28,8 @@ public class LoginUITemplate extends JFrame {
 
     private ObjGraficosService sObjGraficos;
 
+    private LoginComponent loginComponent;
+
 
     //Decoradores
 
@@ -43,12 +45,11 @@ public class LoginUITemplate extends JFrame {
 
 
 
-    public LoginUITemplate(){
+    public LoginUITemplate(LoginComponent loginComponent){
         super("Login usuario");
 
+        this.loginComponent = loginComponent;
         sObjGraficos = ObjGraficosService.getService();
-
-
 
         this.Jdecoradores();
         this.JLabels();
@@ -68,6 +69,8 @@ public class LoginUITemplate extends JFrame {
         setLayout(null);
 
     }
+
+
 
     public void Jdecoradores(){
 
@@ -273,4 +276,40 @@ public class LoginUITemplate extends JFrame {
         bottonGroup.add(checkSi);
         bottonGroup.add(checkNo);
     }
+
+
+
+    public JTextField getTextNombreUsuario() {
+        return textNombreUsuario;
+    }
+
+    public JPasswordField gettClaveUser() {
+        return tClaveUser;
+    }
+
+    public JComboBox getUserType() {
+        return userType;
+    }
+
+    public JButton getBloginI() {
+        return bloginI;
+    }
+
+    public JButton getbRegistry() {
+        return bRegistry;
+    }
+
+    public JButton getbExit() {
+        return bExit;
+    }
+
+    public JCheckBox getCheckSi() {
+        return checkSi;
+    }
+
+    public JCheckBox getCheckNo() {
+        return checkNo;
+    }
+
+
 }

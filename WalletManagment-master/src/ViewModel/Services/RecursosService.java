@@ -90,9 +90,6 @@ public class RecursosService {
         return cursivafont;
     }
 
-    public static RecursosService getServicio() {
-        return servicio;
-    }
 
     public static RecursosService getService(){
         if (servicio==null) servicio = new RecursosService();
